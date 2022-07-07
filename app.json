@@ -1,0 +1,75 @@
+{
+  "name": "BOT TẠO LINK CHIA SẺ FILE TELEGRAM",
+  "description": "chia sẻ tệp bài đăng trên cửa hàng bot và nó có thể truy cập bằng các liên kết đặc biệt",
+  "keywords": [
+    "telegram",
+    "file",
+    "sharing"
+  ],
+  "repository": "https://fb.com/sang1900",
+  "logo": "https://i.imgur.com/ZqUT3Sb.jpg",
+  "env": {
+    "TG_BOT_TOKEN": {
+      "description": "Mã thông báo Bot của bạn, lấy nó từ @Botfather",
+      "value": "5474586633:AAG1h6v3I-Pgn-_DMMBgY3VpcyCd8_5VKF4"
+    },
+    "OWNER_ID": {
+      "description": "Một số nguyên bao gồm ID chủ sở hữu của bạn",
+      "value": "1256256055"
+    },
+    "APP_ID":{
+      "description": "id ứng dụng của bạn, lấy nó từ my.telegram.org",
+      "value": ""
+    },
+    "API_HASH":{
+      "description": "Nhập api của bạn, lấy nó từ my.telegram.org ",
+      "value": ""
+    },
+    "CHANNEL_ID":{
+      "description": "Tạo kênh (kênh cơ sở dữ liệu), sau đó đặt bot làm quản trị viên trong kênh và đó là id",
+      "value": "-1001701467861"
+    },
+    "FORCE_SUB_CHANNEL":{
+      "description": "id của kênh hoặc nhóm, nếu bạn muốn bật tính năng buộc phụ thì hãy đặt 0",
+      "value": " -1001694211696"
+    },
+    "START_MESSAGE": {
+      "description": "Tùy chọn: thông báo bắt đầu của bot, sử dụng định dạng mã phân tích cú pháp HTML",
+      "value": "Hello {first}\n\nI can store private files in Specified Channel and other users can access it from special link."
+    },
+    "FORCE_SUB_MESSAGE": {
+      "description": "Tùy chọn: Buộc thông báo phụ của bot, sử dụng định dạng mã phân tích cú pháp HTML",
+      "value": "Hello {first}\n\n<b>You need to join in my Channel/Group to use me\n\nKindly Please join Channel</b>"
+    },
+    "ADMINS": {
+      "description": "Danh sách user_id của Quản trị viên được phân tách bằng dấu cách, họ chỉ có thể tạo liên kết",
+      "value": "1256256055",
+      "required": false
+    },
+    "PROTECT_CONTENT": {
+      "description": "Bảo vệ nội dung khỏi bị chuyển tiếp",
+      "value": "True",
+      "required": false
+    }
+  },
+  "addons": [
+    {
+    "plan": "heroku-postgresql",
+      "options": {
+        "version": "12"
+      }
+    }
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
+
