@@ -19,12 +19,12 @@
     },
     "APP_ID":{
       "description": "id ứng dụng của bạn, lấy nó từ my.telegram.org",
-      "value": ""
+      "value": "1463122"
     },
     "API_HASH":{
       "description": "Nhập api của bạn, lấy nó từ my.telegram.org ",
-      "value": ""
-    },
+      "value": "7cbd58988dd9079a3a1623e65cc1c256"
+    }, 
     "CHANNEL_ID":{
       "description": "Tạo kênh (kênh cơ sở dữ liệu), sau đó đặt bot làm quản trị viên trong kênh và đó là id",
       "value": "-1001701467861"
